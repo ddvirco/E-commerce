@@ -1,25 +1,11 @@
-import { useState } from "react"
 import { useDispatch } from "react-redux"
 
 function ProductCart({ price, id, image, title }) {
-
-    const [units, setUnits] = useState(1)
 
     const dispatch = useDispatch()
 
     const reduxRemove = (id) => {
         dispatch({type:"Delete" , payload:{id} })
-    }
-
-    const addOne = (price) => {
-        console.log(price)
-        let totalUnits = setUnits(units +1)
-        let sum = parseInt(price * totalUnits) 
-        console.log(sum)
-    }
-    const lessOne = () => {
-        setUnits(units -1)
-        console.log("one less..")
     }
 
     return (
@@ -36,12 +22,6 @@ function ProductCart({ price, id, image, title }) {
                         <div className='col-md-4'>
                             <h3>{title}</h3>
                             <p className='lead fw-bolder'>$ {price}</p>
-                            <button className='btn btn-info' onClick={() => addOne(price)}>+</button>
-                            {price} , {units}
-                            <button className='btn btn-info' onClick={() => lessOne()}>-</button>
-                                     
-                              total price: 
-
                         </div>
                     
                     </div>

@@ -18,28 +18,13 @@ import AboutArea from './Components/Layout/AboutAre/About';
 import ContactComp from './Components/Layout/Content/Contact';
 
 function App() {
-    const [isDark, setIsDark] = useState([])
-
     const [allData, setAllData] = useState([])
 
-
-    async function getAllProducts(){
-        const resp = await axios.get("https://fakestoreapi.com/products")
-        setAllData(resp.data)
-    }
-
-    useEffect(() => {
-        getAllProducts()
-    },[])
-
-
-  return (
+    return (
     <BrowserRouter>  
-      {/* <MyContext.Provider value={[isDark,setIsDark, allData, setAllData]}> */}
-      <MyContext.Provider value={[isDark,setIsDark]} >
+      <MyContext.Provider value={[allData, setAllData]} >
                 <div className="App">
                     <NavbarComp />
-                    {/* <HomeComp /> */}
                     <Routes>
                         <Route  path='/' element={<HomeComp/>}></Route>
                         <Route path='/home' element={<HomeComp/>}></Route>

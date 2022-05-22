@@ -5,7 +5,7 @@ import myContext from "../../../MyContext"
 
 function ProductDetailsComp() {
 
-    const [isDark, setIsDark] = useContext(myContext)
+    const [allData, setAllData] = useContext(myContext)
 
     const { id } = useParams()
     const [oneProduct, setOneProduct] = useState({})

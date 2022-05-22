@@ -1,11 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import {NavLink} from 'react-router-dom'
-import myContext from '../../../MyContext';
 
 function NavbarComp() {
 
-    const [isDark, setIsDark] = React.useContext(myContext)
     const storeDate = useSelector(state => state)
 
     return (
@@ -42,8 +40,6 @@ function NavbarComp() {
                     </div>
                 </div>
             </nav>
-        
-        
     </div>
     );
 }

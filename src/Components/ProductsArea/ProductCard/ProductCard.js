@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 
 function ProductCard({price, title,image, description, winnerNumber, id}){
 
-    const [isDark, setIsDark] = React.useContext(myContext)
+    const [allData, setAllData] = React.useContext(myContext)
 
     const dispatch = useDispatch()
     
@@ -19,10 +19,6 @@ function ProductCard({price, title,image, description, winnerNumber, id}){
                     <h5 className="card-title mb-0">{title.substring(0,12)}</h5>
                     <p className="card-text fw-bolder">{price} $</p>
                     <NavLink to={`/products/${id}`} className="btn btn-primary mb-2">Buy Now</NavLink>
-                    {/* <button className="btn btn-warning" 
-                    onClick={()=> winnerNumber(id)}>
-                        Delete
-                    </button> */}
                 </div>
             </div>
         </div>
