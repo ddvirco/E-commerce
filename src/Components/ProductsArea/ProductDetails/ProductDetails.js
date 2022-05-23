@@ -34,7 +34,7 @@ function ProductDetailsComp() {
         return (
             <>
                 <div className="col-md-6">
-                    <img src={oneProduct.image} alt={oneProduct.title} height="400px" width="400px" />
+                    <img src={oneProduct.image} alt={oneProduct.title} height="300px" width="300px" />
                 </div>
                 <div className="col-md-6">
                     <h4 className="text-uppercase text-black-50">{oneProduct.category}</h4>

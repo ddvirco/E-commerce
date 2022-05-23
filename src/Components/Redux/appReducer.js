@@ -9,7 +9,7 @@ const appReducer = (state = {cartProducts :[]}, action) => {
                 return {...state}
             }
             // -----------
-            return {...state ,cartProducts : [...state.cartProducts, action.payload] }
+            return {...state ,cartProducts : [...state.cartProducts, action.payload]}
             
         
         case "Delete":

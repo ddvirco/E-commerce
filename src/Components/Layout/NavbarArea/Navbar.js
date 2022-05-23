@@ -1,13 +1,13 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function NavbarComp() {
 
     const storeDate = useSelector(state => state)
 
     return (
-        <div>
+        <div >
             <nav className="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-sm">
                 <div className="container">
                     <NavLink className="navbar-brand fw-bold fs-4" to="/home">Awesome Shop</NavLink>
@@ -40,7 +40,7 @@ function NavbarComp() {
                     </div>
                 </div>
             </nav>
-    </div>
+        </div>
     );
 }
 
